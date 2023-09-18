@@ -1,0 +1,82 @@
+<html>
+<head>
+    
+    
+	<link rel='stylesheet' href='style.css'  />
+    <link rel='stylesheet' href='modal.css'  />
+ <script   src="https://code.jquery.com/jquery-2.2.3.min.js"  crossorigin="anonymous"></script>
+
+ 
+<section class="modal hidden">
+  <div class="flex">
+    <img src="user.png" width="50px" height="50px" alt="user" />
+    <button class="btn-close">⨉</button>
+  </div>
+  <div>
+    <h3>EDIT</h3>
+   
+  </div>
+
+  <textarea id="autoresizing">  </textarea>
+  <button class="btn">Submit</button>
+</section>
+
+<div class="overlay hidden"></div>
+
+</head>
+
+
+
+<body>
+<textarea id="p1" >Ulol</textarea>
+<p id="demo"></p>
+    <main>
+    <div class="main">
+        <div class="main-container">
+    
+    <div class="header">
+        <input type="text" class="txtHeader" id="txtHeader" placeholder="Enter title here"/>
+        &nbsp; 
+    </div>
+
+ <form id="note-form" method ="post">
+    <div class="content">
+         <textarea  class="txtContent" name = "notePad" id="txtContent" ></textarea>
+         <span id="wordCount">0 </span> characters
+         <p id="saving" name = "saving"></p>
+        
+    </div>
+
+</form>
+        <div class="options">
+            <center> 
+            <button onclick="downloadFile()" class="btn btn-download">DOWNLOAD</button>
+            <button onclick="changeStyle('b')" class="btn1"><b>B</b></button>
+            <button onclick="changeStyle('i')" class="btn1"><i>i</i></button>
+            <button onclick="changeStyle('u')" class="btn1">u</button>
+            <button onclick="changeStyle('n')" class="btn1">n</button>
+            </center>
+        </div>
+        <button id="note-submit" onclick="openInNewTab('http://localhost:3000/notepad(SaveToDatabase)/');" >New</button>
+        <button onclick="clearNote()">Click me</button>
+        <p  name = "notes2" id="notes2" ></p>
+        <p id="notes" name = "notes"></p>
+
+      
+        
+    </div>
+    </div>
+
+</div>
+
+</main>
+
+
+
+</body>
+
+<script src='script.js' ></script>
+<script src='history.js' ></script>
+<script src='getdata.js' ></script>
+<script src='countChar.js' ></script>
+</html>
